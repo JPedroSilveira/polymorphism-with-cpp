@@ -1,2 +1,2 @@
-# mlp-lab-02
-Exercise to learn about polymorphism.
+# Models of Program Languages - Laboratory 2
+Exercise to learn about polymorphism with C++.
