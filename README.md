@@ -1,2 +1,2 @@
-# Models of Program Languages - Laboratory 2
+# Programming Language Models - Laboratory 2
 Exercise to learn about polymorphism with C++.
