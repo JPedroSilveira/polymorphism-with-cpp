@@ -30,18 +30,16 @@ void exercicio2()
 	// Resposta:
 	// Para realizar a modificação trocamos o tipo passado como parametro,
 	// int para Pessoa*.
-	vector<Pessoa*> vetor;
+	vector<Pessoa*> pessoas;
    	int i=0;
 	
 	for(i = 0; i < SIZE; i++){
-      	vetor.push_back(new Pessoa());
+      	pessoas.push_back(new Pessoa());
   	}
 
-	vector<Pessoa*>::iterator elemento = vetor.begin(); 
-	i=0;
-	while( elemento != vetor.end()) {
-    	cout << " elemento " << i++ << " = " << (*elemento)->toString() << endl;
-    	elemento++;
+	for(const auto& pessoa : pessoas)
+	{
+		cout << pessoa->toString() << endl;
 	}
 }
 
@@ -53,22 +51,20 @@ void exercicio3()
 	// é necessário criar uma cópia do objeto Aluno com a classe Pessoa, assim será invocado o método toString da superclasse.
 	// Também é possível optar por não sobreescrever o método toString na sub-classe, criando um segundo método
 	// para impressão no novo formato, como: String toStringAluno().
-	vector<Pessoa*> vetor;
+	vector<Pessoa*> pessoas;
    	int i=0;
  	
 	for(i = 0; i < SIZE; i++){
 		if (i < SIZE/2) {
-      		vetor.push_back(new Pessoa());
+      		pessoas.push_back(new Pessoa());
 		} else {
-			vetor.push_back(new Aluno());
+			pessoas.push_back(new Aluno());
 		}
   	}
 
-	vector<Pessoa*>::iterator elemento = vetor.begin(); 
-	i=0;
-	while( elemento != vetor.end()) {
-    	cout << " elemento " << i++ << " = " << (*elemento)->toString() << endl;
-    	elemento++;
+	for(const auto& pessoa : pessoas)
+	{
+		cout << pessoa->toString() << endl;
 	}
 }
 

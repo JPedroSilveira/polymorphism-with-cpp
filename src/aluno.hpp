@@ -22,7 +22,7 @@ class Aluno: public Pessoa
 		const Nivel get_nivel() const;		
 		void set_nivel(Nivel nivel); 
 		
-		std::string toString() const;
+		virtual std::string toString() const;
 		
 	private:				
 		std::string codigo;		

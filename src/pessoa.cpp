@@ -81,20 +81,20 @@ void Pessoa::set_sexo(Pessoa::Sexo sexo){
 }
 
 std::string Pessoa::toString() const {
-			time_t dtnascimento = this->get_dtnascimento();			
-			std::string tmp = "Pessoa{\n\tNome: ";
+	time_t dtnascimento = this->get_dtnascimento();			
+	std::string tmp = "Pessoa{\n\tNome: ";
 			
-			std::string sexos[] = { "Indefinido", "Masculino", "Feminino" };
+	std::string sexos[] = { "Indefinido", "Masculino", "Feminino" };
 			
-			tmp.append(this->get_nome());
-			tmp.append("\n\tSexo: ");
-			tmp.append(sexos[this->get_sexo()]);
-			tmp.append("\n\tNascimento: ");
-			tmp.append(ctime(&dtnascimento));
-			tmp.append("}\n");
+	tmp.append(this->get_nome());
+	tmp.append("\n\tSexo: ");
+	tmp.append(sexos[this->get_sexo()]);
+	tmp.append("\n\tNascimento: ");
+	tmp.append(ctime(&dtnascimento));
+	tmp.append("}\n");
 			
-			return tmp;
-		}
+	return tmp;
+}
 
 // Sobrecarga do operador << usado em cout
 // Permite imprimir strings representativas para a enumeração Sexo
